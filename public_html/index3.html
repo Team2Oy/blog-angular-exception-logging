@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>Team2 - Angular Server Side Logging Example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://code.angularjs.org/1.2.16/angular.js"></script>
+        <script src="https://code.angularjs.org/1.2.16/angular-resource.js"></script>        
+        <script src="app1.js"></script>
+        <script src="app2.js"></script>
+        <script src="app3.js"></script>
+    </head>
+    <body ng-controller="MainController">
+        Angular exception handling test, please open javascript console (alt + cmd + J).
+        
+        <h1>Error logging to server side</h1>
+        <a href="index.html">Menu</a>
+
+        <pre>
+            To run the test server that logs your exceptions:
+            =================================================
+            cd error_logging_server
+            npm install
+            node index.js
+        </pre>
+        
+        <hr/>
+        Apples: {{ model.counter }}
+        <input type="button" value="Get more apples!" ng-click="increaseCounter()"/>
+
+        <input type="button" value="Create error 1" ng-click="createError1()"/>
+        <input type="button" value="Create error 2" ng-click="createError2()"/>
+        <input type="button" value="Create error 3" ng-click="createError3(7, 7)"/>
+    </body>
+</html>
